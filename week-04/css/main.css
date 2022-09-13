@@ -6,22 +6,15 @@ justify-content: center;
 } */
 
 #imagenprincipal {
-height: 427px;
-width: 497px;
-left: 961px;
-top: 177px;
-border-radius: 0px;
+max-width: 400px;
+margin-bottom: 5%;
 }
 
 .flexcontainermain1 > img {
 /* margin-bottom: 6%;
 margin-right: 2%;
 margin-left: 4%; */
-height: 427px;
-width: 497px;
-left: 961px;
-top: 177px;
-border-radius: 0px;
+
 }
 
 .flexcontainermain2 >h2 {
@@ -74,6 +67,7 @@ margin-bottom: 10%;
 .flexcontainer2 {
 display: flex;
 flex-direction: column;
+justify-content: space-between;
 }
 
 .imgclock2,.imgreports2,.imgmanage2,.imgroles2  {
@@ -107,6 +101,7 @@ margin-bottom: 8%;
 display: flex;
 flex-direction: column;
 margin-bottom: 30px;
+justify-content: space-between;
 }
 
 .imgboost,.imgmultirole,.imgbusiness,.imgdecision {
@@ -172,6 +167,9 @@ border-radius: 4px;
 height: 37px;
 }
 
+#inputmail {
+margin-right: 10px;
+}
 form >select,form >textarea {
 width: 100%;
 background: none;
@@ -333,6 +331,10 @@ margin-bottom: 10px;
 font-size: 12px;
 }
 
+.productbox >li,.companybox >li,.supportbox{
+list-style: decimal;
+}
+
 /* @media (min-width:768px){
 .flexcontainer2 {
     flex-direction: row;
@@ -345,27 +347,6 @@ font-size: 12px;
     flex-direction: row;}
 }
 
-@media (min-width:1024px) {
-    .flexcontainermain2
-        {
-        width: 40%;
-        }
-    .flexcontainermain1
-        {
-        flex-direction:row-reverse;
-        align-items: flex-start;
-        }
-        /* .flexcontainer3
-        {
-        flex-wrap: nowrap;
-        }
-        .imgclock,.imgreports,.imgmanage,.imgroles
-        {
-        flex: 0 1 auto;
-        flex-wrap: wrap;
-        } */
-}
-
 @media (min-width:768px) {
     .imgclock,.imgreports,.imgmanage,.imgroles
     {
@@ -376,4 +357,45 @@ font-size: 12px;
         flex-direction: row;
         flex-wrap: wrap;
     }
+    #inputname,#inputmail {
+    width: 42%;
+    }
 }
+
+@media (min-width:1024px) {
+    .flexcontainer1{
+    align-items: flex-start;
+    }
+    .flexcontainermain2
+        {
+        width: 40%;
+        }
+    .flexcontainermain1
+        {
+        flex-direction:row-reverse;
+        align-items: flex-end;
+        }
+        .flexcontainer2
+        {
+        flex-direction: row;
+        flex-wrap: wrap;
+        }
+        .imgclock,.imgreports,.imgmanage,.imgroles {
+        width: 45%;
+        }
+        .flexcontainer3 >div {
+        width: 20%;
+        }
+        /*.flexcontainer3
+        {
+        flex-wrap: nowrap;
+        } */
+        /* .imgclock,.imgreports,.imgmanage,.imgroles
+        {
+        flex: 0 1 auto;
+        flex-wrap: wrap;
+        } */
+}
+
+
+

@@ -22,9 +22,9 @@ align-self: center;
 margin-right: 7%;
 }
 
-
+/* 
 @media (min-width:1024px) {
-    .flexheader >img{
+    .flexheader{
     margin-left: 100%;
     }
-    }
+    } */
