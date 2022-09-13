@@ -131,8 +131,11 @@ margin-top: 15px;
 font-size: 12px;
 }
 
-.flexcontainer3 >h2 {
+#h2container3 {
 font-size: 30px;
+border-bottom: 4px solid #49A37B;
+width: fit-content;
+margin-bottom: 8%;
 }
 
 .imgboost >img,.imgmultirole >img,.imgbusiness >img,.imgdecision >img {
@@ -216,6 +219,8 @@ border: none;
 .textbox1,.textbox2 {
 display: none;
 }
+
+
 
 /* #imagen2 {
 height: 112.53434082660988px;
@@ -386,6 +391,13 @@ list-style: decimal;
         .flexcontainer3 >div {
         width: 20%;
         }
+        /* .h2h3mobile,.textboxmobile,.textboxmobile2
+        {
+        display: none;
+        }
+        .textbox1,.textbox2 {
+        display: initial;
+        } */
         /*.flexcontainer3
         {
         flex-wrap: nowrap;

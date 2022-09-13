@@ -18,9 +18,16 @@ a {
     }
 
 @media (min-width:1024px) {
-main,footer,.flexheader{
+main,.flexheader{
 width:72%;
 margin-left: 28%;
 }
 }
 
+@media (min-width:1024px) {
+    footer
+    {
+    width:72%;
+    margin-left: 15%;
+    }
+    }

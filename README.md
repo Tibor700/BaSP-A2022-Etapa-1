@@ -17,7 +17,8 @@ the third weekly problematic is desing the html document with css to make look l
 the fourth weekly problematic is desing the landing page of all plataforms making it responsive by using flexbox and others tools.
 
 ## manual
-this link goes to the hosted page week-04 version
+the page is visible smooth in width 480px ,768px and 1024px ,it breaks a litle between this sizes and after pass the 1024px.
+this link goes to the hosted page week-04 version https://tibor700.github.io/BaSP-A2022-Etapa-1/week-04/index.html
 
 ## Authors
 - Tibor Takacs
