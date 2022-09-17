@@ -25,9 +25,9 @@ margin-left: 28%;
 }
 
 @media (min-width:1024px) {
-    footer
-    {
-    width:72%;
-    margin-left: 15%;
-    }
-    }
+footer
+{
+width:72%;
+margin-left: 15%;
+}
+}
