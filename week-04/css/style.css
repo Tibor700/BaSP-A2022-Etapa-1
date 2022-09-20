@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 body {
-height: 100%;
-background-color: #373867;
-font-family: "Roboto", sans-serif;
-color: white;
-overflow-x: hidden;
+    height: 100%;
+    background-color: #373867;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    overflow-x: hidden;
 }
 
 section {
-border-bottom: 4px solid #49A37B;
-margin: 5vh;
+    border-bottom: 4px solid #49A37B;
+    margin: 5vh;
 }
 
 a {
@@ -18,16 +18,16 @@ a {
     }
 
 @media (min-width:1024px) {
-main,.flexheader{
-width:72%;
-margin-left: 28%;
+    main,.flexheader{
+    width:72%;
+    margin-left: 28%;
 }
 }
 
 @media (min-width:1024px) {
-footer
-{
-width:72%;
-margin-left: 15%;
-}
+    footer
+    {
+        width:72%;
+        margin-left: 15%;
+    }
 }

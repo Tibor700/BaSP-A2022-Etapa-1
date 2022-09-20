@@ -43,17 +43,17 @@ console.log(validinteger(3.4));
 console.log('Exercise 6.d:');
 function suma3 (num1,num2)
 {
-    if (isNaN(num1)==false && isNaN(num2)==false && validinteger(num1) && validinteger(num2))
+    if (typeof(num1)==="number" && typeof(num2)==="number" && validinteger(num1) && validinteger(num2))
     {
         return num1+num2;
     } else if (validinteger(num1)==false)
     {
-        alert('hay parametros decimales:',num1,num2);
-        return Math.floor(num1)+Math.floor(num2);
+        alert('hay parametros decimales');
+        return Math.floor(num1);
     } else if(validinteger(num2)==false)
     {
-        alert('hay parametros decimales:',num2,num1);
-        return Math.floor(num2)+Math.floor(num1);
+        alert('hay parametros decimales');
+        return Math.floor(num2);
     } else
     {
         alert('los parametros tienen error');
@@ -64,9 +64,11 @@ function suma3 (num1,num2)
 var ejm = suma3(3,4);
 var ejm2 = suma3(2,3.5);
 var ejm3 = suma3(2,'hola');
+var ejm4 = suma3(true,4);
 console.log('resultado 1:',ejm);
 console.log('resultado 2:',ejm2);
 console.log('resultado 3:',ejm3);
+console.log('resultado 4:',ejm4);
 
 // Convertir la validación del ejercicio 6d en una función separada y llamarla dentro de la función suma
 // probando que todo siga funcionando igual.
@@ -77,3 +79,4 @@ var resultado3 = suma(suma3(2,3),suma3(3,'hola'));
 console.log('este es el resultado:',resultado1);
 console.log('este es el resultado:',resultado2);
 console.log('este es el resultado:',resultado3);
+
