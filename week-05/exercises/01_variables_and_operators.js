@@ -9,11 +9,11 @@ console.log('la suma es:',suma);
 console.log('Exercise 1.b:');
 var nombre = 'pepito';
 var apellido = 'perez';
-var nombrecompleto = nombre + apellido;
-console.log("El nombre es",nombrecompleto);
+var nombreCompleto = nombre + apellido;
+console.log("El nombre es",nombreCompleto);
 // Crear dos variables de tipo String y sumar el largo de cada variable guardando el resultado de la suma en una 3er variable
 console.log('Exercise 1.c:');
 var pais = 'uruguay';
 var ciudad = 'montevideo';
-var sumalargo = pais.length + ciudad.length;
-console.log("la suma del largo es:",sumalargo);
+var sumaLargo = pais.length + ciudad.length;
+console.log("la suma del largo es:",sumaLargo);

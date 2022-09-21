@@ -1,21 +1,21 @@
 console.log('Exercise 4 if and else');
 // Crear un número aleatorio entre 0 y 1 utilizando la función Math.random
 console.log('Exercise 4.a:');
-var randomnumber = Math.random();
-if(randomnumber >= 0.5)
+var randomNumber = Math.random();
+if(randomNumber >= 0.5)
 {
     alert('Greater than 0,5');
 } else{
     alert('Lower than 0,5')
 }
-console.log('el numero es:',randomnumber);
+console.log('el numero es:',randomNumber);
 
 // Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los mensajes de alerta
 console.log('Exercise 4.b:');
-const generaraleatorio = (min,max ) => {
+const generarAleatorio = (min,max ) => {
 return Math.floor(Math.random() * (max - min)) + min;
 }
-var Age = generaraleatorio(0,101);
+var Age = generarAleatorio(0,101);
 if(Age <= 2){
     alert('Bebe');
 } else if (Age >=2 && Age <=12){

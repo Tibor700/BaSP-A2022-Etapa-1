@@ -1,39 +1,39 @@
 
 
 
-#imagenprincipal {
+#imagen-principal {
     max-width: 400px;
     margin-bottom: 5%;
 }
 
 
-.flexcontainermain2 >h2 {
+.sub-first-container2 >h2 {
     font-size: 30px;
     margin-bottom: 6%;
 }
 
 
-.flexcontainermain2 >h3 {
+.sub-first-container2 >h3 {
     font-size: 20px;
     margin-bottom: 6%;
 }
 
 
-.flexcontainermain2{
+.sub-first-container2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 
-.flexcontainermain1{
+.sub-first-container{
     display: flex;
     flex-direction:column;
     justify-content: space-between;
 }
 
 
-.learnmore {
+.learn-more {
     display: block;
     width: fit-content;
     background-color: #49a37b;
@@ -48,7 +48,7 @@
 }
 
 
-.flexcontainermain2 >p {
+.sub-first-container2 >p {
     font-size: 12px;
     margin-bottom: 10%;
 }
@@ -62,7 +62,7 @@
 }
 
 
-.flexcontainer2 {
+.sub-second-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -79,6 +79,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 8%;
 }
 
 
@@ -93,11 +94,6 @@
 .imgclock2 >p,.imgreports2 >p,.imgmanage2 >p,.imgroles2 >p {
     font-size: 12px;
     margin-left: 2%;
-}
-
-
-.imgclock,.imgreports,.imgmanage,.imgroles {
-    margin-bottom: 8%;
 }
 
 
@@ -383,19 +379,19 @@ form >textarea {
 }
 
 @media (min-width:1024px) {
-    .flexcontainer1{
+    .first-section-container{
     align-items: flex-start;
     }
-    .flexcontainermain2
+    .sub-first-container2
         {
         width: 40%;
         }
-    .flexcontainermain1
+    .sub-first-container
         {
         flex-direction:row-reverse;
         align-items: flex-end;
         }
-        .flexcontainer2
+        .sub-second-container
         {
         flex-direction: row;
         flex-wrap: wrap;

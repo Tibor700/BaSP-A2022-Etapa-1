@@ -29,13 +29,13 @@ console.log(ejemplo2);
 
 // crear una función validate Integer que reciba un número como parámetro y devuelva verdadero si es un número entero.
 console.log('Exercise 6.c:');
-function validinteger (num1)
+function validInteger (num1)
 {
     var reusltado = num1 - Math.floor(num1);
     return reusltado == 0;
 }
-console.log(validinteger(3));
-console.log(validinteger(3.4));
+console.log(validInteger(3));
+console.log(validInteger(3.4));
 
 // A la función suma del ejercicio 6b agregarle una llamada a la función del ejercicio 6c.
 // y que valide que los números sean enteros. En caso que haya decimales mostrar un alerta con el error y
@@ -43,14 +43,14 @@ console.log(validinteger(3.4));
 console.log('Exercise 6.d:');
 function suma3 (num1,num2)
 {
-    if (typeof(num1)==="number" && typeof(num2)==="number" && validinteger(num1) && validinteger(num2))
+    if (typeof(num1)==="number" && typeof(num2)==="number" && validInteger(num1) && validInteger(num2))
     {
         return num1+num2;
-    } else if (validinteger(num1)==false)
+    } else if (validInteger(num1)==false)
     {
         alert('hay parametros decimales');
         return Math.floor(num1);
-    } else if(validinteger(num2)==false)
+    } else if(validInteger(num2)==false)
     {
         alert('hay parametros decimales');
         return Math.floor(num2);

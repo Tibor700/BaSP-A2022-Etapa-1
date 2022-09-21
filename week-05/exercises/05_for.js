@@ -34,8 +34,8 @@ console.log(sentence);
 // al final de la ejecución del bucle for debería haber 10 elementos dentro del array, desde el número 0 hasta al número 9.
 // Mostrar por la consola del navegador el array final
 console.log('Exercise 5.d:');
-var arraycontainer = [];
+var arrayContainer = [];
 for (i=0; i<10; i++) {
-    arraycontainer.push(i);
+    arrayContainer.push(i);
 }
-console.log('este es el array lleno:',arraycontainer);
+console.log('este es el array lleno:',arrayContainer);

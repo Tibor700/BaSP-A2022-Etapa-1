@@ -34,5 +34,5 @@ console.log('este es el string con guiones:',strmeses);
 
 // Crear una copia del array de meses que contenga desde Mayo hasta Noviembre
 console.log('Exercise 3.g:');
-var mesesalterno =meses.slice(4,11);
-console.log('este es el array alterno:',mesesalterno);
+var mesesAlterno =meses.slice(4,11);
+console.log('este es el array alterno:',mesesAlterno);
