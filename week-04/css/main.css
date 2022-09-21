@@ -69,13 +69,13 @@
 }
 
 
-.imgclock2,.imgreports2,.imgmanage2,.imgroles2  {
+.sub-second-container-text  {
     display: flex;
     flex-direction: column;
 }
 
 
-.imgclock,.imgreports,.imgmanage,.imgroles {
+.sub-second-container-img{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -83,7 +83,7 @@
 }
 
 
-.imgclock2 >h3,.imgreports2 >h3,.imgmanage2 >h3,.imgroles2 >h3 {
+.isub-second-container-text >h3 {
     font-size: 20px;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -91,13 +91,13 @@
 }
 
 
-.imgclock2 >p,.imgreports2 >p,.imgmanage2 >p,.imgroles2 >p {
+.sub-second-container-text >p {
     font-size: 12px;
     margin-left: 2%;
 }
 
 
-.flexcontainer3 {
+.sub-third-container{
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -105,7 +105,7 @@
 }
 
 
-.imgboost,.imgmultirole,.imgbusiness,.imgdecision {
+.sub-third-container-content {
     display: flex;
     justify-content: first baseline;
     flex-direction: column;
@@ -121,7 +121,7 @@
 }
 
 
-.imgboost >h4,.imgmultirole >h4,.imgbusiness >h4,.imgdecision >h4 {
+.sub-third-container-content >h4 {
     font-size: 20px;
     align-self: flex-start;
     margin-left: 15px;
@@ -129,7 +129,7 @@
 }
 
 
-.imgboost >p,.imgmultirole >p,.imgbusiness >p,.imgdecision >p {
+.sub-third-container-content >p {
     font-size: 12px;
 }
 
@@ -142,13 +142,13 @@
 }
 
 
-.imgboost >img,.imgmultirole >img,.imgbusiness >img,.imgdecision >img {
+.sub-third-container-content >img {
     align-self: flex-end;
     margin-right: 10px;
 }
 
 
-.imgboost >p,.imgmultirole >p,.imgbusiness >p,.imgdecision >p {
+.sub-third-container-content >p {
     align-self: center;
     height: 71px;
     width: 218px;
@@ -158,7 +158,7 @@
 }
 
 
-.contactmain >h2{
+.forth-section-container >h2{
     font-size: 30px;
     border-bottom: 4px solid #49A37B;
     width: fit-content;
@@ -178,7 +178,12 @@
 
 
 #inputmail {
-    margin-right: 10px;
+    margin-right: 15px;
+}
+
+
+#inputname {
+    margin-right: 60px;
 }
 
 
@@ -200,11 +205,6 @@ form >select {
 
 form >textarea {
     height: 100px;
-}
-
-
-#inputname {
-    margin-right: 80px;
 }
 
 
@@ -232,30 +232,30 @@ form >textarea {
 }
 
 
-.textbox1,.textbox2 {
+.sub-fifth-container1-desktop,.sub-fifth-container2-desktop {
     display: none;
 }
 
 
-.loremmain >h2 {
+.fifth-section-container >h2 {
     font-size: 30px;
     margin-bottom: 40px;
 }
 
 
-.loremmain >h3 {
+.fifth-section-container >h3 {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
 
-.textboxmobile {
+.sub-fifth-container-mobile-content{
     display: flex;
     margin-bottom: 60px;
 }
 
 
-.textboxmobile >p{
+.sub-fifth-container-mobile-content >p{
     height: 81px;
     width: 128px;
     left: 40px;
@@ -265,7 +265,7 @@ form >textarea {
 }
 
 
-#imagenmobile {
+#imagen-mobile {
     height: 112.53434082660988px;
     width: 168.8015188693089px;
     left: 177.572265625px;
@@ -274,25 +274,25 @@ form >textarea {
 }
 
 
-.h2h3mobile >h2 {
+.sub-fifth-container-mobile-titles >h2 {
     font-size: 30px;
     margin-bottom: 40px;
 }
 
 
-.h2h3mobile >h3 {
+.sub-fifth-container-mobile-titles >h3 {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
 
-.textboxmobile2 >h3 {
+.sub-fifth-container2-mobile-content >h3 {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
 
-.textboxmobile2 >p {
+.sub-fifth-container2-mobile-content >p {
     font-size: 12px;
     height: 154px;
     width: 237px;
@@ -304,44 +304,20 @@ form >textarea {
 }
 
 
-.endmain {
+.sixth-section-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
 }
 
 
-.productbox {
+.sub-sixth-container {
     width: fit-content;
     margin-bottom: 30px;
 }
 
 
-.companybox {
-    width: fit-content;
-    margin-bottom: 30px;
-}
-
-
-.supportbox {
-    width: fit-content;
-    margin-bottom: 30px;
-}
-
-
-.productbox >h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-
-.companybox >h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-
-.supportbox >h3{
+.sub-sixth-container >h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -352,29 +328,29 @@ form >textarea {
 }
 
 
-.productbox >li,.companybox >li,.supportbox{
+.sub-sixth-container >li{
     list-style: decimal;
 }
 
 
 @media (min-width:480px) {
-.endmain {
+.sixth-section-container {
     justify-content: space-evenly;
     flex-direction: row;}
 }
 
 @media (min-width:768px) {
-    .imgclock,.imgreports,.imgmanage,.imgroles
+    .sub-second-container-img
     {
         flex-direction: row;
     }
-    .flexcontainer3
+    .sub-third-container
     {
         flex-direction: row;
         flex-wrap: wrap;
     }
     #inputname,#inputmail {
-    width: 42%;
+    width: 43%;
     }
 }
 
@@ -396,10 +372,10 @@ form >textarea {
         flex-direction: row;
         flex-wrap: wrap;
         }
-        .imgclock,.imgreports,.imgmanage,.imgroles {
+        .sub-second-container-img {
         width: 45%;
         }
-        .flexcontainer3 >div {
+        .sub-third-container >div {
         width: 20%;
         }
 }
