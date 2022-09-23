@@ -1,0 +1,90 @@
+aside {
+    display: none;
+}
+
+@media only screen and (min-width: 1024px)
+{
+    aside {
+        display: initial;
+    }
+
+
+.contact-side >p {
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+
+address >div{
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+
+#get-in-touch {
+    border-bottom: 4px solid #49a37b ;
+}
+
+
+.border-side {
+    border-bottom: 1px solid #49a37b ;
+}
+.links-side {
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+
+.links-side ul li a {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    display: block;
+    border-bottom: 1px solid #49a37b ;
+    text-decoration: none;
+}
+
+
+aside {
+    position: fixed;
+    width: 28%;
+    min-width: 252px;
+    height: 100vh;
+    background-color: #262862;
+}
+
+
+.search {
+    width: 100%;
+    height: 8vh;
+    min-height: 80px;
+    background-color: #373867;
+    top: 0;
+    left: 0;
+}
+
+
+.search > input {
+    top: 40%;
+    right: 7.76%;
+    bottom: 22%;
+    left: 10.35%;
+    width: 81%;
+    height: 37%;
+    min-height: 38px;
+    background-color: #262862;
+    border: 1px solid #49a37b;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+}
+

@@ -28,5 +28,12 @@ the second one: fix the errors in week-04 guided by the feedback given by the tu
 this link goes to the index week-05 to see the exercises.
 https://tibor700.github.io/BaSP-A2022-Etapa-1/week-05/index.html
 
+## week 06
+the sixth weekly problematic consist in making login page and singup page from the screenflow if week-01 and link to the page of the week-04.
+
+## manual 06
+this link goes to the index of week-06.
+https://tibor700.github.io/BaSP-A2022-Etapa-1/week-06/index.html
+
 ## Authors
 - Tibor Takacs
