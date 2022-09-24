@@ -1,0 +1,68 @@
+.sign-up-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-up-sub-container {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+height: 710.8870199242057px;
+width: 85%;
+
+border-radius: 0px;
+background-color: white;
+margin-bottom: 30px;
+align-items: center;
+color: #373867;
+border: outset;
+box-shadow: 5px 5px 10px 2px grey;
+}
+
+.sign-up-sub-container >h2{
+    /* color: #373867; */
+    font-size: 36px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.input-name-email {
+    width: 100%;
+    border: none;
+}
+
+
+.input-already-registered {
+    height: 50.39835624949014px;
+width: 50%;
+height: 60px;
+background-color: #AACE9B;
+margin: #373867;
+border-radius: 5px;
+font-size: 100%;
+font-weight: 700;
+color:white;
+}
+
+.sign-up-sub-container >a{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #232F3E;
+}
+
+.input-container {
+    border-bottom:2px solid #232F3E;
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+.input-container >input {
+    /* margin-left: 5px; */
+}
+
+@media (min-width:1024px) {
+    .sign-up-sub-container2 {
+        flex-wrap: wrap;
+
+    }
+}
