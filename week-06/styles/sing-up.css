@@ -7,9 +7,8 @@
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-height: 710.8870199242057px;
 width: 85%;
-
+height: 70%;
 border-radius: 0px;
 background-color: white;
 margin-bottom: 30px;
@@ -19,10 +18,20 @@ border: outset;
 box-shadow: 5px 5px 10px 2px grey;
 }
 
+
+.sign-up-sub-container2{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
 .sign-up-sub-container >h2{
     /* color: #373867; */
     font-size: 36px;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 30px;
 }
 
@@ -56,13 +65,15 @@ color:white;
     margin-bottom: 30px;
 }
 
-.input-container >input {
-    /* margin-left: 5px; */
-}
 
 @media (min-width:1024px) {
     .sign-up-sub-container2 {
         flex-wrap: wrap;
+        flex-direction: row;
 
+    }
+    .input-container {
+        margin-left: 40px;
+        width: 40%;
     }
 }
