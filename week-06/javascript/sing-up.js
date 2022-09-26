@@ -28,7 +28,15 @@ var bornDate = document.getElementById("born-date");
 bornDate.setAttribute("placeholder","21/03/1997");
 
 var createBotton = document.getElementById("create-botton");
+createBotton.addEventListener('click',buttonClick);
+
+
+
+
+
+
+
+
 
 
 }
-

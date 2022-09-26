@@ -9,7 +9,6 @@ flex-direction: column;
 justify-content: flex-start;
 height: 710.8870199242057px;
 width: 70%;
-
 border-radius: 0px;
 background-color: white;
 margin-bottom: 30px;
@@ -52,10 +51,13 @@ color: #373867;
 .input-container {
     border-bottom:2px solid #232F3E;
     width: 70%;
-    
+}
+
+.feedback-div {
+    color: red;
     margin-bottom: 30px;
 }
 
-.input-container >input {
-    /* margin-left: 5px; */
+.checkbox-container {
+    display: flex;
 }

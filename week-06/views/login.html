@@ -48,18 +48,26 @@
             </div>
         </header>
         <main>
-            <section class="login-container">
-                <div class="login-sub-container">
-                    <h2>Log In</h2>
-                    <div class="input-container">
-                        <p>Email</p><img src="../assets/login-email.png" alt=""><input type="text" class="input-name-email" id="email">
+            <section>
+                <form class="login-container">
+                    <div class="login-sub-container">
+                        <h2>Log In</h2>
+                        <div class="input-container">
+                            <p>Email</p><img src="../assets/login-email.png" alt=""><input type="text" class="input-name-email" id="email">
+                        </div>
+                        <div class="feedback-div" id="email-feedback"></div>
+                        <div class="input-container">
+                            <p> Password</p><img src="../assets/login-lock.png" alt=""><input type="text" class="input-name-email" id="password">
+                        </div>
+                        <div class="feedback-div" id="password-feedback"></div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="remenber-checkbox">
+                            <p>Remember me</p>
+                        </div>
+                        <a href="../views/sign-up.html">Not registered yet?</a>
+                        <input type="submit" value="Continue" class="input-continue" id="continue-botton">
                     </div>
-                    <div class="input-container">
-                        <p> Password</p><img src="../assets/login-lock.png" alt=""><input type="text" class="input-name-email" id="password">
-                    </div>
-                    <a href="../views/sign-up.html">Not registered yet?</a>
-                    <input type="button" value="Continue" class="input-continue" id="continue-botton">
-                </div>
+                </form>
             </section>
             <footer>
                 <div class="footer-container">
