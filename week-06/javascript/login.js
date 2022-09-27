@@ -32,7 +32,7 @@ window.onload = function() {
     function passwordValidation() {
         var currentPassword = password.value;
         var alertP = document.createElement("p");
-        if (currentPassword.value.length == 0){
+        if (password.value.length == 0){
             return;
         }
         if (currentPassword.length < 8) {
@@ -68,10 +68,21 @@ window.onload = function() {
     password.addEventListener('focus',passwordReset);
 
     function continueAlert(e){
-        e.preventDefealt();
+        e.preventDefault();
+        var emailFeedbackStatus = feedBackEmail.firstChild;
+        var emailAnswer ="";
+        emailFeedbackStatus? emailAnswer = "ERROR: " + emailFeedbackStatus.innerHTML : emailAnswer = email.value;
+        var passwordFeedbackStatus =feedBackPassword.firstChild;
+        var passwordAnswer ="";
+        passwordFeedbackStatus? passwordAnswer = "ERROR: " + passwordFeedbackStatus.innerHTML : passwordAnswer =password.value;
+        if(!email.value) emailAnswer = "SORRY : Empty email field.";
+        if(!password.value) passwordAnswer = "SORRY : Empty password field.";
+        var answer = emailAnswer + "\n" + passwordAnswer;
+        alert(answer);
     }
 
-    continueButton.addEventListener('onclick',)
+    continueButton.addEventListener('click', continueAlert);
+
 
 
 
