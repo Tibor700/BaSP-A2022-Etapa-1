@@ -29,12 +29,10 @@ window.onload = function() {
     var feedBackPcode = document.getElementById("postal-code-feedback");
 
     var telephone = document.getElementById("telephone");
-    telephone.setAttribute("placeholder","092439856");
+    telephone.setAttribute("placeholder","0924398563");
     var feedBackTelephone = document.getElementById("telephone-feedback");
 
     var bornDate = document.getElementById("born-date");
-    bornDate.setAttribute("placeholder","21/03/1997");
-    var feedBackBdate = document.getElementById("born-date-feedback");
 
     var password = document.getElementById("password");
     var feedBackPassword = document.getElementById("password-feedback");
@@ -134,11 +132,6 @@ window.onload = function() {
             feedBackRPassword.appendChild(alertP);
             return;
         }
-        // if (currentRPassword.value != currentPassword.value) {
-        //     alertP.innerText = "Repeat password have to be the same."
-        //     feedBackRPassword.appendChild(alertP);
-        //     return;
-        // }
     }
 
     repeatPassword.addEventListener('blur',repeatPasswordValidation);
@@ -307,16 +300,6 @@ window.onload = function() {
             feedBackDirection.appendChild(alertP);
             return;
         }
-        // var hasSpace = false;
-        // for (var i = 0; i < currentdirection.length; i++) {
-        //     if (currentdirection[i].indexof (" ")) {
-        //         hasSpace = true;
-        //         return;
-        //     }else {
-        //         alertP.innerText = "Direction must contain space in the midle.";
-        //         feedBackDirection.appendChild(alertP);
-        //     }
-        // }
     }
 
     direction.addEventListener('blur',directionValidation);
@@ -350,9 +333,79 @@ window.onload = function() {
     location.addEventListener('focus',locationReset);
 
 
-    function bornDateValidation (){
-        
+    function createAlert(e){
+        e.preventDefault();
+
+        var emailFeedbackStatus = feedBackEmail.firstChild;
+        var emailAnswer ="";
+        emailFeedbackStatus? emailAnswer = "ERROR: " + emailFeedbackStatus.innerHTML : emailAnswer = email.value;
+
+        var passwordFeedbackStatus =feedBackPassword.firstChild;
+        var passwordAnswer ="";
+        passwordFeedbackStatus? passwordAnswer = "ERROR: " + passwordFeedbackStatus.innerHTML : passwordAnswer =password.value;
+
+        var fNameFeedbackStatus = feedBackFname.firstChild;
+        var fNameAnswer ="";
+        fNameFeedbackStatus? fNameAnswer = "ERROR: " + fNameFeedbackStatus.innerHTML : fNameAnswer = firstName.value;
+
+        var lNameFeedbackStatus = feedBackLname.firstChild;
+        var lNameAnswer ="";
+        lNameFeedbackStatus? lNameAnswer = "ERROR: " + lNameFeedbackStatus.innerHTML : lNameAnswer = lastName.value;
+
+        var dniFeedbackStatus = feedBackDni.firstChild;
+        var dniAnswer ="";
+        dniFeedbackStatus? dniAnswer = "ERROR: " + dniFeedbackStatus.innerHTML : dniAnswer = dni.value;
+
+        var directionFeedbackStatus = feedBackDirection.firstChild;
+        var directionAnswer ="";
+        directionFeedbackStatus? directionAnswer = "ERROR: " + directionFeedbackStatus.innerHTML : directionAnswer = direction.value;
+
+        var locationFeedbackStatus = feedBackLocation.firstChild;
+        var locationAnswer ="";
+        locationFeedbackStatus? locationAnswer = "ERROR: " + locationFeedbackStatus.innerHTML : locationAnswer = location.value;
+
+        var postalCodeFeedbackStatus = feedBackPcode.firstChild;
+        var postalCodeAnswer ="";
+        postalCodeFeedbackStatus? postalCodeAnswer = "ERROR: " + postalCodeFeedbackStatus.innerHTML : postalCodeAnswer = postalCode.value;
+
+        var telephoneFeedbackStatus = feedBackTelephone.firstChild;
+        var telephoneAnswer ="";
+        telephoneFeedbackStatus? telephoneAnswer = "ERROR: " + telephoneFeedbackStatus.innerHTML : telephoneAnswer = telephone.value;
+
+        var repeatPasswordFeedbackStatus = feedBackRPassword.firstChild;
+        var repeatPasswordAnswer ="";
+        repeatPasswordFeedbackStatus? repeatPasswordAnswer = "ERROR: " + repeatPasswordFeedbackStatus.innerHTML : repeatPasswordAnswer =
+        repeatPassword.value;
+
+
+        if(!repeatPassword.value) repeatPasswordAnswer = "SORRY : Empty repeatPassword field.";
+        if(!telephone.value) telephoneAnswer = "SORRY : Empty telephone field.";
+        if(!postalCode.value) postalCodeAnswer = "SORRY : Empty postalCode field.";
+        if(!location.value) locationAnswer = "SORRY : Empty location field.";
+        if(!direction.value) directionAnswer = "SORRY : Empty direction field.";
+        if(!dni.value) dniAnswer = "SORRY : Empty DNI field.";
+        if(!lastName.value) lNameAnswer = "SORRY : Empty last name field.";
+        if(!firstName.value) fNameAnswer = "SORRY : Empty first name field.";
+        if(!email.value) emailAnswer = "SORRY : Empty email field.";
+        if(!password.value) passwordAnswer = "SORRY : Empty password field.";
+
+        if(!repeatPasswordFeedbackStatus && !telephoneFeedbackStatus && !postalCodeFeedbackStatus &&
+            !locationFeedbackStatus && !directionFeedbackStatus && !dniFeedbackStatus &&
+            !lNameFeedbackStatus && !fNameFeedbackStatus && !passwordFeedbackStatus && !emailFeedbackStatus)
+        {
+            passwordAnswer ="Password: " + password.value; emailAnswer ="Email: " + email.value;
+            fNameAnswer="Firts name: " + firstName.value; lNameAnswer ="Last name: "+ lastName.value;
+            dniAnswer ="DNI: "+dni.value; directionAnswer ="Direction: " +direction.value;
+            locationAnswer ="Location: "+location.value; postalCodeAnswer ="Postal code: "+postalCode.value;
+            telephoneAnswer ="Telephone: "+telephone.value; repeatPasswordAnswer ="Repeat password: "+repeatPassword.value;
+        }
+
+        var answer = emailAnswer +"\n"+ passwordAnswer +"\n"+ fNameAnswer +"\n"+ lNameAnswer +"\n"+ dniAnswer +"\n"+ directionAnswer
+        +"\n"+ locationAnswer +"\n"+ telephoneAnswer +"\n"+ repeatPasswordAnswer;
+        alert(answer);
     }
+
+    createBotton.addEventListener('click', createAlert);
 
 
 
