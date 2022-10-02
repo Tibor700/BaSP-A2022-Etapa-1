@@ -35,5 +35,12 @@ the sixth weekly problematic consist in making login page and singup page from t
 this link goes to the index of week-06.
 https://tibor700.github.io/BaSP-A2022-Etapa-1/week-06/views/index.html
 
+## week 07
+the seventh weekly propblematic consist in extend the functionality of the form ,making that the information in inputs send a server by request HTTP to store it.
+
+## manual 07
+this link goes to the index of week-07.
+https://tibor700.github.io/BaSP-A2022-Etapa-1/week-07/views/index.html
+
 ## Authors
 - Tibor Takacs

@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    font-size: 40px;
+    margin: 5vh;
+    padding-bottom: 30px;
+    border-bottom: 4px solid #49A37B;
+    align-items: center;
+}
+
+
+.header-container {
+    display: flex;
+    align-content: flex-start;
+}
+
+
+.h1-container {
+    align-self: center;
+}
+
+
+.header-container >img {
+    margin-right: 35px;
+}
