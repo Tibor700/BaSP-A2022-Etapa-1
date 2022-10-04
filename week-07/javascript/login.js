@@ -84,31 +84,31 @@ window.onload = function() {
             var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email='+email.value+'&password='+password.value
             var promise = fetch(url)
             promise.then(function(response){
-                return response.json()
-            }).then(function(data){
-                console.log(data)
-            }).catch(function (error) {
-                console.log("Error: ",error);
-            }) 
+                    return response.json()
+                })
+                .then(function(data){
+                    if(data.success) alert(data.msg)
+                    else if (data.errors){
+                        var string ='';
+                        for (var error of data.errors){
+                            string+='-'+error.msg+'\n'
+                        }
+                        alert('sorry ,something is wrong: \n'+string)
+                        throw new Error("Error with the request")
+                    }
+                    else{
+                        alert('sorry ,something is wrong: \n'+data.msg)
+                        throw new Error("Error with the request")
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
         }
 
 }
 
     continueButton.addEventListener('click', continueAlert);
-
-
-// var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + email.value + 'password='+ password.value
-
-// var promise = fetch(url)
-//  .then(function(response){
-//     return response.json()
-//  })
-//  .then(function(data){
-//     console.log(data)
-//  })
-//  .catch(function (error) {
-//     console.log("Error: ",error);
-//  })
 
 
 

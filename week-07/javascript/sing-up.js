@@ -158,7 +158,8 @@ window.onload = function() {
             return;
         }
         for (var i = 0; i < currentFirstName.length; i++) {
-            if (!isNaN(parseInt(currentFirstName[i])) || (currentFirstName[i].charCodeAt() > 32 && currentFirstName[i].charCodeAt() < 48)) {
+            if (!isNaN(parseInt(currentFirstName[i])) || (currentFirstName[i].charCodeAt() > 32 && currentFirstName[i].charCodeAt() < 48))
+            {
                 alertP.innerText = "First name must contain only letters.";
                 feedBackFname.appendChild(alertP);
             }
@@ -189,7 +190,8 @@ window.onload = function() {
             return;
         }
         for (var i = 0; i < currentLastName.length; i++) {
-            if (!isNaN(parseInt(currentLastName[i])) || (currentLastName[i].charCodeAt() > 32 && currentLastName[i].charCodeAt() < 48)) {
+            if (!isNaN(parseInt(currentLastName[i])) || (currentLastName[i].charCodeAt() > 32 && currentLastName[i].charCodeAt() < 48))
+            {
                 alertP.innerText = "Last name must contain only letters.";
                 feedBackLname.appendChild(alertP);
             }
@@ -333,7 +335,8 @@ window.onload = function() {
     location.addEventListener('focus',locationReset);
 
 
-    function createAlert(e){
+    function createAlert(e)
+    {
         e.preventDefault();
 
         var emailFeedbackStatus = feedBackEmail.firstChild;
@@ -366,7 +369,8 @@ window.onload = function() {
 
         var postalCodeFeedbackStatus = feedBackPcode.firstChild;
         var postalCodeAnswer ="";
-        postalCodeFeedbackStatus? postalCodeAnswer = "ERROR: " + postalCodeFeedbackStatus.innerHTML : postalCodeAnswer = postalCode.value;
+        postalCodeFeedbackStatus? postalCodeAnswer = "ERROR: " + postalCodeFeedbackStatus.innerHTML : postalCodeAnswer =
+        postalCode.value;
 
         var telephoneFeedbackStatus = feedBackTelephone.firstChild;
         var telephoneAnswer ="";
@@ -374,8 +378,8 @@ window.onload = function() {
 
         var repeatPasswordFeedbackStatus = feedBackRPassword.firstChild;
         var repeatPasswordAnswer ="";
-        repeatPasswordFeedbackStatus? repeatPasswordAnswer = "ERROR: " + repeatPasswordFeedbackStatus.innerHTML : repeatPasswordAnswer =
-        repeatPassword.value;
+        repeatPasswordFeedbackStatus? repeatPasswordAnswer = "ERROR: " + repeatPasswordFeedbackStatus.innerHTML :
+        repeatPasswordAnswer =repeatPassword.value;
 
 
         if(!repeatPassword.value) repeatPasswordAnswer = "SORRY : Empty repeatPassword field.";
@@ -398,6 +402,41 @@ window.onload = function() {
             dniAnswer ="DNI: "+dni.value; directionAnswer ="Direction: " +direction.value;
             locationAnswer ="Location: "+location.value; postalCodeAnswer ="Postal code: "+postalCode.value;
             telephoneAnswer ="Telephone: "+telephone.value; repeatPasswordAnswer ="Repeat password: "+repeatPassword.value;
+
+            var url ='https://basp-m2022-api-rest-server.herokuapp.com/signup?name='+firstName+'&lastname='+lastName
+            +'&dni='+dni+'&dob='+bornDate+'&phone='+telephone+'&address='+direction+'&city='+location+'&zip='+postalCode
+            +'&email='+email+'&password='+password;
+
+                fetch(url)
+            .then(function(res) {
+                return res.json()
+            })
+            .then(function(data) {
+                if (data.success) {
+                    localStorage.setItem('firstname', firstName);
+                    localStorage.setItem('lastName', lastName);
+                    localStorage.setItem('dni', dni);
+                    localStorage.setItem('borndate', bornDate);
+                    localStorage.setItem('telephone', telephone);
+                    localStorage.setItem('direction', direction);
+                    localStorage.setItem('location', location);
+                    localStorage.setItem('postalCode', postalCode);
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('password', password);
+                    alert(data.msg)
+                }
+                else {
+                    var string = ''
+                    for (var error of data.errors) {
+                        string += '- ' + error.msg + '\n'
+                    }
+                    alert('Something is wrong: \n' + string)
+                    throw new Error("There was an problem with the request")
+                }
+            })
+            .catch(function(error){
+                console.log(error)
+            })
         }
 
         var answer = emailAnswer +"\n"+ passwordAnswer +"\n"+ fNameAnswer +"\n"+ lNameAnswer +"\n"+ dniAnswer +"\n"+ directionAnswer
