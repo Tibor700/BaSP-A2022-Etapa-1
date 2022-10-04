@@ -42,6 +42,17 @@ window.onload = function() {
 
     var createBotton = document.getElementById("create-botton");
 
+    firstName.value=localStorage.getItem('name');
+    lastName.value=localStorage.getItem('lastName');
+    email.value=localStorage.getItem('email');
+    dni.value=localStorage.getItem('dni');
+    bornDate.value=localStorage.getItem('bornDate');
+    direction.value=localStorage.getItem('direction');
+    location.value=localStorage.getItem('location');
+    postalCode.value=localStorage.getItem('postalCode');
+    telephone.value=localStorage.getItem('telephone');
+    password.value=localStorage.getItem('password');
+    repeatPassword.value=localStorage.getItem('repeatPassword');
 
     function emailValidation() {
         var alertP = document.createElement("p");
@@ -403,9 +414,15 @@ window.onload = function() {
             locationAnswer ="Location: "+location.value; postalCodeAnswer ="Postal code: "+postalCode.value;
             telephoneAnswer ="Telephone: "+telephone.value; repeatPasswordAnswer ="Repeat password: "+repeatPassword.value;
 
-            var url ='https://basp-m2022-api-rest-server.herokuapp.com/signup?name='+firstName+'&lastname='+lastName
-            +'&dni='+dni+'&dob='+bornDate+'&phone='+telephone+'&address='+direction+'&city='+location+'&zip='+postalCode
-            +'&email='+email+'&password='+password;
+            var dateNewformat = bornDate.value.split('-');
+            var newDob = dateNewformat[1]+'/'+dateNewformat[2]+'/'+dateNewformat[0];
+            var storedDob = dateNewformat[2]+'/'+dateNewformat[1]+'/'+dateNewformat[0];
+            console.log(dateNewformat);
+            console.log(bornDate.value);
+
+            var url ='https://basp-m2022-api-rest-server.herokuapp.com/signup?name='+firstName.value+'&lastName='+lastName.value
+            +'&dni='+dni.value+'&dob='+newDob+'&phone='+telephone.value+'&address='+direction.value+'&city='+location.value
+            +'&zip='+postalCode.value+'&email='+email.value+'&password='+password.value;
 
                 fetch(url)
             .then(function(res) {
@@ -413,16 +430,17 @@ window.onload = function() {
             })
             .then(function(data) {
                 if (data.success) {
-                    localStorage.setItem('firstname', firstName);
-                    localStorage.setItem('lastName', lastName);
-                    localStorage.setItem('dni', dni);
-                    localStorage.setItem('borndate', bornDate);
-                    localStorage.setItem('telephone', telephone);
-                    localStorage.setItem('direction', direction);
-                    localStorage.setItem('location', location);
-                    localStorage.setItem('postalCode', postalCode);
-                    localStorage.setItem('email', email);
-                    localStorage.setItem('password', password);
+                    localStorage.setItem('name', firstName.value);
+                    localStorage.setItem('lastName', lastName.value);
+                    localStorage.setItem('dni', dni.value);
+                    localStorage.setItem('borndate', storedDob);
+                    localStorage.setItem('telephone', telephone.value);
+                    localStorage.setItem('direction', direction.value);
+                    localStorage.setItem('location', location.value);
+                    localStorage.setItem('postalCode', postalCode.value);
+                    localStorage.setItem('email', email.value);
+                    localStorage.setItem('password', password.value);
+                    localStorage.setItem('repeatPassword', repeatPassword.value);
                     alert(data.msg)
                 }
                 else {
