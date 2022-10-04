@@ -57,7 +57,7 @@ window.onload = function() {
     function emailValidation() {
         var alertP = document.createElement("p");
         var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-        if(email.value.length == 0){
+        if(email.value.length === 0){
             return;
         }
         if (!emailExpression.test(email.value)) {
@@ -78,7 +78,7 @@ window.onload = function() {
     function passwordValidation() {
         var currentPassword = password.value;
         var alertP = document.createElement("p");
-        if (password.value.length == 0){
+        if (password.value.length === 0){
             return;
         }
         if (currentPassword.length < 8) {
@@ -118,7 +118,7 @@ window.onload = function() {
         var currentPassword = password.value;
         var currentRPassword = repeatPassword.value;
         var alertP = document.createElement("p");
-        if (repeatPassword.value.length == 0){
+        if (repeatPassword.value.length === 0){
             return;
         }
         if (currentRPassword.length < 8) {
@@ -160,7 +160,7 @@ window.onload = function() {
     {
         var currentFirstName = firstName.value;
         var alertP = document.createElement("p");
-        if (currentFirstName.length == 0) {
+        if (currentFirstName.length === 0) {
             return;
         }
         if (currentFirstName.length < 3) {
@@ -192,7 +192,7 @@ window.onload = function() {
     {
         var currentLastName = lastName.value;
         var alertP = document.createElement("p");
-        if (currentLastName.length == 0) {
+        if (currentLastName.length === 0) {
             return;
         }
         if (currentLastName.length < 3) {
@@ -221,7 +221,7 @@ window.onload = function() {
     function dniValidation () {
         var currentDni = dni.value;
         var alertP = document.createElement("p");
-        if (currentDni.length == 0) {
+        if (currentDni.length === 0) {
             return;
         }
         if (currentDni.length < 7) {
@@ -249,10 +249,10 @@ window.onload = function() {
     function telephoneValidation () {
         var currentTelephone = telephone.value;
         var alertP = document.createElement("p");
-        if (currentTelephone.length == 0) {
+        if (currentTelephone.length === 0) {
             return;
         }
-        if (currentTelephone.length < 10 || currentTelephone.length > 10 ) {
+        if (currentTelephone.length !== 10  ) {
             alertP.innerText = "telephone must contain 10 numbers.";
             feedBackTelephone.appendChild(alertP);
             return;
@@ -277,7 +277,7 @@ window.onload = function() {
     function pCodeValidation () {
         var currentPcode = postalCode.value;
         var alertP = document.createElement("p");
-        if (currentPcode.length == 0) {
+        if (currentPcode.length === 0) {
             return;
         }
         if (currentPcode.length < 4 || currentPcode.length > 5 ) {
@@ -305,7 +305,7 @@ window.onload = function() {
     function directionValidation () {
         var currentDirection = direction.value;
         var alertP = document.createElement("p");
-        if (currentDirection.length == 0) {
+        if (currentDirection.length === 0) {
             return;
         }
         if (currentDirection.length < 5 ) {
@@ -416,7 +416,7 @@ window.onload = function() {
 
             var dateNewformat = bornDate.value.split('-');
             var newDob = dateNewformat[1]+'/'+dateNewformat[2]+'/'+dateNewformat[0];
-            var storedDob = dateNewformat[2]+'/'+dateNewformat[1]+'/'+dateNewformat[0];
+            var storedDob = dateNewformat[0]+'-'+dateNewformat[1]+'-'+dateNewformat[2];
             console.log(dateNewformat);
             console.log(bornDate.value);
 
@@ -433,7 +433,7 @@ window.onload = function() {
                     localStorage.setItem('name', firstName.value);
                     localStorage.setItem('lastName', lastName.value);
                     localStorage.setItem('dni', dni.value);
-                    localStorage.setItem('borndate', storedDob);
+                    localStorage.setItem('bornDate', storedDob);
                     localStorage.setItem('telephone', telephone.value);
                     localStorage.setItem('direction', direction.value);
                     localStorage.setItem('location', location.value);
