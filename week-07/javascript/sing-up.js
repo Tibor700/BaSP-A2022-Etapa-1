@@ -58,7 +58,8 @@ window.onload = function() {
         var alertP = document.createElement("p");
         var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
         if(email.value.length === 0){
-            return;
+            alertP.innerText = "Email can not be empty";
+            feedBackEmail.appendChild(alertP);
         }
         if (!emailExpression.test(email.value)) {
             alertP.innerText = 'Error in email';
@@ -79,12 +80,12 @@ window.onload = function() {
         var currentPassword = password.value;
         var alertP = document.createElement("p");
         if (password.value.length === 0){
-            return;
+            alertP.innerText = "Password can not be empty";
+            feedBackPassword.appendChild(alertP);
         }
         if (currentPassword.length < 8) {
             alertP.innerText = "Password must have at least 8 characters";
             feedBackPassword.appendChild(alertP)
-            return;
         }
         var hasNumber = false;
         var hasLetter = false;
@@ -95,13 +96,11 @@ window.onload = function() {
         if (!hasLetter){
             alertP.innerText = "Pasword must have at least a letter"
             feedBackPassword.appendChild(alertP);
-            return;
         }
 
         if (!hasNumber) {
             alertP.innerText = " Password must have at least a number"
             feedBackPassword.appendChild(alertP);
-            return;
         }
     }
 
@@ -119,12 +118,12 @@ window.onload = function() {
         var currentRPassword = repeatPassword.value;
         var alertP = document.createElement("p");
         if (repeatPassword.value.length === 0){
-            return;
+            alertP.innerText = "Password can not be empty";
+            feedBackRPassword.appendChild(alertP);
         }
         if (currentRPassword.length < 8) {
             alertP.innerText = "Password must have at least 8 characters";
             feedBackRPassword.appendChild(alertP);
-            return;
         }
         var hasNumber = false;
         var hasLetter = false;
@@ -135,13 +134,15 @@ window.onload = function() {
         if (!hasLetter){
             alertP.innerText = "Pasword must have at least a letter";
             feedBackRPassword.appendChild(alertP);
-            return;
         }
 
         if (!hasNumber) {
             alertP.innerText = "Password must have at least a number";
             feedBackRPassword.appendChild(alertP);
-            return;
+        }
+        if (currentPassword!==currentRPassword){
+            alertP.innerText="Repeat password must be the same password"
+            feedBackRPassword.appendChild(alertP);
         }
     }
 
@@ -161,12 +162,12 @@ window.onload = function() {
         var currentFirstName = firstName.value;
         var alertP = document.createElement("p");
         if (currentFirstName.length === 0) {
-            return;
+            alertP.innerText = "First name can not be empty";
+            feedBackFname.appendChild(alertP);
         }
         if (currentFirstName.length < 3) {
             alertP.innerText = "It must contain at least 3 characters.";
             feedBackFname.appendChild(alertP);
-            return;
         }
         for (var i = 0; i < currentFirstName.length; i++) {
             if (!isNaN(parseInt(currentFirstName[i])) || (currentFirstName[i].charCodeAt() > 32 && currentFirstName[i].charCodeAt() < 48))
@@ -193,12 +194,12 @@ window.onload = function() {
         var currentLastName = lastName.value;
         var alertP = document.createElement("p");
         if (currentLastName.length === 0) {
-            return;
+            alertP.innerText = "Last name can not be empty";
+            feedBackLname.appendChild(alertP);
         }
         if (currentLastName.length < 3) {
             alertP.innerText = "It must contain at least 3 characters.";
             feedBackLname.appendChild(alertP);
-            return;
         }
         for (var i = 0; i < currentLastName.length; i++) {
             if (!isNaN(parseInt(currentLastName[i])) || (currentLastName[i].charCodeAt() > 32 && currentLastName[i].charCodeAt() < 48))
@@ -222,12 +223,12 @@ window.onload = function() {
         var currentDni = dni.value;
         var alertP = document.createElement("p");
         if (currentDni.length === 0) {
-            return;
+            alertP.innerText = "DNI can not be empty";
+            feedBackDni.appendChild(alertP);
         }
         if (currentDni.length < 7) {
             alertP.innerText = "It must contain at least 7 numbers.";
             feedBackDni.appendChild(alertP);
-            return;
         }
         for (var i = 0; i < currentDni.length; i++) {
             if (isNaN(currentDni[i])) {
@@ -250,12 +251,12 @@ window.onload = function() {
         var currentTelephone = telephone.value;
         var alertP = document.createElement("p");
         if (currentTelephone.length === 0) {
-            return;
+            alertP.innerText = "Telephone can not be empty";
+            feedBackTelephone.appendChild(alertP);
         }
         if (currentTelephone.length !== 10  ) {
             alertP.innerText = "telephone must contain 10 numbers.";
             feedBackTelephone.appendChild(alertP);
-            return;
         }
         for (var i = 0; i < currentTelephone.length; i++) {
             if (isNaN(currentTelephone[i])) {
@@ -278,12 +279,12 @@ window.onload = function() {
         var currentPcode = postalCode.value;
         var alertP = document.createElement("p");
         if (currentPcode.length === 0) {
-            return;
+            alertP.innerText = "Postal code can not be empty";
+            feedBackPcode.appendChild(alertP);
         }
         if (currentPcode.length < 4 || currentPcode.length > 5 ) {
             alertP.innerText = "Postal code must contain 4 or 5 numbers.";
             feedBackPcode.appendChild(alertP);
-            return;
         }
         for (var i = 0; i < currentPcode.length; i++) {
             if (isNaN(currentPcode[i])) {
@@ -306,12 +307,12 @@ window.onload = function() {
         var currentDirection = direction.value;
         var alertP = document.createElement("p");
         if (currentDirection.length === 0) {
-            return;
+            alertP.innerText = "Direction can not be empty";
+            feedBackDirection.appendChild(alertP);
         }
         if (currentDirection.length < 5 ) {
             alertP.innerText = "Direction must contain 4 or 5 numbers.";
             feedBackDirection.appendChild(alertP);
-            return;
         }
     }
 
@@ -328,12 +329,12 @@ window.onload = function() {
         var currentLocation = location.value;
         var alertP = document.createElement("p");
         if (currentLocation.length == 0) {
-            return;
+            alertP.innerText = "Location can not be empty";
+            feedBackLocation.appendChild(alertP);
         }
         if (currentLocation.length < 3 ) {
             alertP.innerText = "Location must contain at least 3 characters.";
             feedBackLocation.appendChild(alertP);
-            return;
         }
     }
 
